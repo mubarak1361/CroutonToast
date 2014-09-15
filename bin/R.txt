@@ -241,7 +241,8 @@ int drawable abs__textfield_searchview_holo_light 0x7f02006c
 int drawable abs__textfield_searchview_right_holo_dark 0x7f02006d
 int drawable abs__textfield_searchview_right_holo_light 0x7f02006e
 int drawable abs__toast_frame 0x7f02006f
-int drawable ic_launcher 0x7f020070
+int drawable actionbar_style 0x7f020070
+int drawable ic_launcher 0x7f020071
 int id abs__action_bar 0x7f050020
 int id abs__action_bar_container 0x7f05001f
 int id abs__action_bar_subtitle 0x7f050011
@@ -339,8 +340,11 @@ int string abs__shareactionprovider_share_with 0x7f0a0006
 int string abs__shareactionprovider_share_with_application 0x7f0a0007
 int string app_name 0x7f0a000d
 int string hello_world 0x7f0a000e
+int style ActionBar 0x7f0b005b
 int style AppBaseTheme 0x7f0b0059
 int style AppTheme 0x7f0b005a
+int style AppTheme_ActionBar_Menu 0x7f0b005e
+int style AppTheme_ActionBar_TitleTextStyle 0x7f0b005c
 int style Sherlock___TextAppearance_Small 0x7f0b0046
 int style Sherlock___Theme 0x7f0b0051
 int style Sherlock___Theme_DarkActionBar 0x7f0b0053
@@ -377,6 +381,7 @@ int style TextAppearance_Sherlock_Widget_DropDownItem 0x7f0b0045
 int style TextAppearance_Sherlock_Widget_PopupMenu 0x7f0b003f
 int style TextAppearance_Sherlock_Widget_PopupMenu_Large 0x7f0b0040
 int style TextAppearance_Sherlock_Widget_PopupMenu_Small 0x7f0b0042
+int style TextAppearance_Sherlock_Widget_Styled_ActionBar_Subtitle 0x7f0b005d
 int style TextAppearance_Sherlock_Widget_TextView_SpinnerItem 0x7f0b0044
 int style Theme_Sherlock 0x7f0b0054
 int style Theme_Sherlock_Light 0x7f0b0055
