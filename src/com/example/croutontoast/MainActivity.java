@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class MainActivity extends FragmentActivity implements OnClickListener {
 
-	private CroutonToast croutonToast,warningToast,errorToast;
+	private CroutonToast successToast,warningToast,errorToast;
 	private Button success;
 	private Button warning;
 	private Button error;
@@ -27,13 +27,13 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
         
         handler = new Handler();
         
-        croutonToast = new CroutonToast("Information Updated" , Color.parseColor("#8bc34a"));		
-        warningToast = new CroutonToast("Information Incorrect" , Color.parseColor("#ff9800"));
-        errorToast = new CroutonToast("Unable to Update Information" , Color.parseColor("#e51c23"));
+        successToast = new CroutonToast("Success Message" , Color.parseColor("#8bc34a"));		
+        warningToast = new CroutonToast("Warning Message" , Color.parseColor("#ff9800"));
+        errorToast = new CroutonToast("Error Message" , Color.parseColor("#e51c23"));
         
 		success = (Button)findViewById(R.id.success);
-		warning =(Button) findViewById(R.id.warning);
-		error = (Button) findViewById(R.id.error);
+		warning = (Button) findViewById(R.id.warning);
+		error = (Button)  findViewById(R.id.error);
 			
 		success.setOnClickListener(this);
 		warning.setOnClickListener(this);
@@ -49,8 +49,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			
 			ft = getSupportFragmentManager().beginTransaction();
 	        ft.setCustomAnimations(R.animator.enter,R.animator.exit);
-	        ft.replace(R.id.crouton, croutonToast);
-			ft.show(croutonToast);
+	        ft.replace(R.id.crouton, successToast);
+			ft.show(successToast);
 			ft.commit();
 			
 			 runnable = new Runnable(){
@@ -58,7 +58,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			    	
 			    	ft = getSupportFragmentManager().beginTransaction();
 			        ft.setCustomAnimations(R.animator.enter,R.animator.exit);
-			        ft.remove(croutonToast);
+			        ft.remove(successToast);
 			 		ft.commit();
 			 				    	
 			    }
@@ -92,6 +92,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			handler.postDelayed(runnable, interval);
 			
 			break;
+			
 		case R.id.error:
 			
 			ft = getSupportFragmentManager().beginTransaction();
