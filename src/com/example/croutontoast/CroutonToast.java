@@ -1,15 +1,14 @@
 package com.example.croutontoast;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.actionbarsherlock.app.SherlockFragment;
-
-public class CroutonToast extends SherlockFragment {
+public class CroutonToast extends Fragment {
 	private TextView message;
 	private String text;
 	private int bgColor;

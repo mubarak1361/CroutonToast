@@ -3,13 +3,13 @@ package com.example.croutontoast;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
 
-public class MainActivity extends SherlockFragmentActivity implements OnClickListener {
+public class MainActivity extends FragmentActivity implements OnClickListener {
 
 	private CroutonToast croutonToast,warningToast,errorToast;
 	private Button success;
@@ -58,6 +58,7 @@ public class MainActivity extends SherlockFragmentActivity implements OnClickLis
 			    	
 			    	ft = getSupportFragmentManager().beginTransaction();
 			        ft.setCustomAnimations(R.animator.enter,R.animator.exit);
+			        ft.remove(croutonToast);
 			 		ft.hide(croutonToast);
 			 		ft.commit();
 			 				    	
@@ -82,6 +83,7 @@ public class MainActivity extends SherlockFragmentActivity implements OnClickLis
 			    	
 			    	ft = getSupportFragmentManager().beginTransaction();
 			        ft.setCustomAnimations(R.animator.enter,R.animator.exit);
+			        ft.remove(warningToast);
 			 		ft.hide(warningToast);
 			 		ft.commit();
 			 				    	
@@ -105,6 +107,7 @@ public class MainActivity extends SherlockFragmentActivity implements OnClickLis
 			    	
 			    	ft = getSupportFragmentManager().beginTransaction();
 			        ft.setCustomAnimations(R.animator.enter,R.animator.exit);
+			        ft.remove(errorToast);
 			 		ft.hide(errorToast);
 			 		ft.commit();
 			 				    	
