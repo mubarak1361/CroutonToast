@@ -59,7 +59,6 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			    	ft = getSupportFragmentManager().beginTransaction();
 			        ft.setCustomAnimations(R.animator.enter,R.animator.exit);
 			        ft.remove(croutonToast);
-			 		ft.hide(croutonToast);
 			 		ft.commit();
 			 				    	
 			    }
@@ -84,7 +83,6 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			    	ft = getSupportFragmentManager().beginTransaction();
 			        ft.setCustomAnimations(R.animator.enter,R.animator.exit);
 			        ft.remove(warningToast);
-			 		ft.hide(warningToast);
 			 		ft.commit();
 			 				    	
 			    }
@@ -108,7 +106,6 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			    	ft = getSupportFragmentManager().beginTransaction();
 			        ft.setCustomAnimations(R.animator.enter,R.animator.exit);
 			        ft.remove(errorToast);
-			 		ft.hide(errorToast);
 			 		ft.commit();
 			 				    	
 			    }
