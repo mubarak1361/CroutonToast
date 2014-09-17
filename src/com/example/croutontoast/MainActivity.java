@@ -122,4 +122,12 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		}
 		
 	}
+	
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		
+		 handler.removeCallbacksAndMessages(null);
+		 
+	}
 }
